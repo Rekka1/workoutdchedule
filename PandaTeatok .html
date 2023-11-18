@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PandaTeatok</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1C1C1C;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #1C1C1C;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .navbar.responsive a {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    .navbar.responsive {
+      text-align: left;
+    }
+
+    .navbar a.icon {
+      display: none;
+    }
+
+    .navbar.responsive a.icon {
+      float: right;
+      display: block;
+    }
+
+    .navbar.responsive {
+      position: relative;
+    }
+
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .product-content {
+      padding: 20px;
+      display: none;
+    }
+
+    .product-item {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-line {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .product-image {
+      width: 50px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .home-content {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .buy-button {
+      background-color: #4CAF50;
+      color: black;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PandaTeatok</h1>
+</div>
+
+<div class="navbar" id="myNavbar">
+  <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+  <a href="#" onclick="showHome()">Home</a>
+  <a href="#" onclick="showProducts()">Products</a>
+  <a href="https://maps.google.com/?cid=2151856441563711527&entry=gps">Location </a>
+  <a href="https://wa.me/6289519299897">Contact Us</a>
+</div>
+
+<!-- Add your content here -->
+<div class="home-content" id="homeSection">
+  <p>PandaTeatok didirikan sebagai perusahaan pelayaran di Pos Polisi Pondok Ungu Permai. Sebagai sektor pertahanan tubuh, kami menyediakan berbagai jawaban dan pilihan yang sesuai dengan kebutuhan Anda. Jangan ragu untuk menjelajahi dunia PandaTeatok!</p>
+</div>
+
+<div class="product-content" id="productsSection" style="display:none;">
+	<div class="product-line"></div>
+  <div class="product-item">
+    <div>
+    <h1>Choco Series</h1>
+    </div>
+  </div>
+  <div class="product-line"></div>
+  
+  <div class="product-item">
+    <div>
+      <h3>Choco SQueen</h3>
+      <p>Harga: Rp. 10.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi1.jpeg" alt="Kopi1"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>White Coffee</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi2.jpeg" alt="Kopi2"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Coffee</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi3.jpeg" alt="Kopi3"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+  <div class="product-line"></div>
+  
+  <div class="product-item">
+    <div>
+    <h1>Tea Series</h1>
+    </div>
+  </div>
+  <div class="product-line"></div>
+  
+  <div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+  <div class="product-line"></div>
+
+<div class="product-item">
+    <div>
+    <h1>Coffee Series</h1>
+    </div>
+  </div>
+  <div class="product-line"></div>
+  
+  <div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+  <div class="product-line"></div>
+
+<div class="product-item">
+    <div>
+    <h1>Milky Series</h1>
+    </div>
+  </div>
+  <div class="product-line"></div>
+  
+  <div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+
+<div class="product-item">
+    <div>
+      <h3>Ice Milo</h3>
+      <p>Harga: Rp 5.000</p>
+      <button class="buy-button" onclick="buyProduct()">Buy</button>
+    </div>
+    <img src="kopi4.jpeg" alt="Kopi4"" class="product-image">
+  </div>
+<div class="product-line"></div>
+  <!-- Add more product items and lines here as needed -->
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+
+  function showHome() {
+    document.getElementById("homeSection").style.display = "block";
+    document.getElementById("productsSection").style.display = "none";
+  }
+
+  function showProducts() {
+    document.getElementById("homeSection").style.display = "none";
+    document.getElementById("productsSection").style.display = "block";
+  }
+
+  function buyProduct() {
+    alert("Product purchased! Thank you!");
+    // Add your logic for handling the purchase here
+  }
+</script>
+
+</body>
+</html>
